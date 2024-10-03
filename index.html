@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Shopee Empregos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: #333;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .relative-container {
+            position: relative;
+        }
+
+        .shopee-logo {
+            width: 150px;
+            position: absolute;
+            bottom: 0; /* Align at the bottom */
+            left: 50%;
+            transform: translateX(-50%); /* Shift to ensure exact center alignment */
+        }
+
+        .theme-text {
+            font-size: 36px;
+            font-weight: bold;
+            color: #ff5722;
+            margin-top: 20px;
+        }
+
+        .subtext {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ff5722;
+            color: white;
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 50px;
+            text-decoration: none;
+            margin: 20px auto;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-btn .logo-container {
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+        }
+
+        .contact-btn img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .contact-btn span {
+            text-align: center;
+            width: 100%;
+        }
+
+        .contact-btn:hover {
+            background-color: #e64a19;
+        }
+
+        p {
+            font-size: 16px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        h2 {
+            color: #ff5722;
+            margin: 20px 0;
+        }
+
+        .description {
+            margin-top: 40px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-btn {
+                padding: 12px;
+                font-size: 16px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-btn {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- First Image with Shopee Logo centered on the bottom edge -->
+        <div class="relative-container">
+            <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg" alt="Shopee Team">
+            <img src="https://freelogopng.com/images/all_img/1656180674shopee-logo-transparent.png" alt="Shopee Logo" class="shopee-logo">
+        </div>
+
+        <!-- Shopee Logo and Theme Text in a Separate Section -->
+        <div class="shopee-section">
+            <div class="theme-text">Shopee</div>
+            <div class="subtext">Clique no botão abaixo para entrar em contato conosco</div>
+        </div>
+
+        <!-- Second Image -->
+        <img src="https://images.pexels.com/photos/3182832/pexels-photo-3182832.jpeg" alt="Shopee Team 2">
+
+        <!-- Contact Button (below second image, full-width) -->
+        <a href="https://wa.me/5551999999999" class="contact-btn">
+            <div class="logo-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+            </div>
+            <span>Contate-nos</span>
+        </a>
+
+        <!-- Job Description (below contact button) -->
+        <div class="description">
+            <h2>TEMPO PARCIAL EM TEMPO INTEGRAL</h2>
+            <p>Estamos a recrutar colaboradores a tempo parcial ou a tempo inteiro. Trabalhar a partir de casa, sem experiência profissional, apenas necessita de trabalhar 3 a 5 horas por dia e ganhar um bom salário. Não perca esta oportunidade de emprego estável e regular.</p>
+        </div>
+
+        <!-- Third Image -->
+        <img src="https://images.pexels.com/photos/3182802/pexels-photo-3182802.jpeg" alt="Comprovante de Transação">
+        
+        <!-- Additional Image at the Bottom -->
+        <img src="https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg" alt="Additional Image">
+    </div>
+
+</body>
+</html>
