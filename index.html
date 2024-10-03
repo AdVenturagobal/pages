@@ -1,180 +1,242 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="zh-CN">
 <head>
-    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>Shopee Empregos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>广告投放服务</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: white;
+            background-color: #f5f5f5;
             color: #333;
             line-height: 1.6;
+        }
+        header {
+            background-color: #005cbf;
+            color: white;
+            padding: 60px 20px;
             text-align: center;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        img {
-            width: 100%;
-            height: auto;
-        }
-
-        .relative-container {
             position: relative;
         }
-
-        .shopee-logo {
-            width: 150px;
-            position: absolute;
-            bottom: 0; /* Align at the bottom */
-            left: 50%;
-            transform: translateX(-50%); /* Shift to ensure exact center alignment */
-        }
-
-        .theme-text {
-            font-size: 36px;
-            font-weight: bold;
-            color: #ff5722;
-            margin-top: 20px;
-        }
-
-        .subtext {
-            font-size: 18px;
-            color: #333;
+        header h1 {
+            font-size: 32px;
+            line-height: 1.5;
             margin-bottom: 20px;
         }
-
-        .contact-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #ff5722;
-            color: white;
-            width: 100%;
-            padding: 15px;
+        header p {
             font-size: 18px;
-            border-radius: 50px;
+            margin-bottom: 20px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
             text-decoration: none;
-            margin: 20px auto;
+            border-radius: 25px;
+            font-size: 18px;
             transition: background-color 0.3s ease;
         }
+        .cta-button:hover {
+            background-color: #3e8e41;
+        }
 
-        .contact-btn .logo-container {
+        /* Service Section */
+        .services {
             background-color: white;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 40px;
-            height: 40px;
-            margin-right: 15px;
+            padding: 40px 20px;
         }
-
-        .contact-btn img {
-            width: 24px;
-            height: 24px;
-        }
-
-        .contact-btn span {
+        .services h2 {
             text-align: center;
-            width: 100%;
+            margin-bottom: 40px;
         }
-
-        .contact-btn:hover {
-            background-color: #e64a19;
+        .service-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
         }
-
-        p {
+        .service-item img {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+        }
+        .service-item h3 {
+            font-size: 22px;
+            color: #005cbf;
+        }
+        .service-item p {
             font-size: 16px;
-            margin: 20px 0;
-            font-weight: bold;
+            margin-top: 10px;
+            flex: 1;
         }
-
-        h2 {
-            color: #ff5722;
-            margin: 20px 0;
+        .about {
+            background-color: #e9f0fa;
+            padding: 40px 20px;
+            text-align: center;
         }
-
-        .description {
-            margin-top: 40px;
+        .about h2 {
+            margin-bottom: 20px;
+        }
+        .about p {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        .contact {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .contact h3 {
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #005cbf;
+            color: white;
+            text-align: center;
+            padding: 10px;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .contact-btn {
-                padding: 12px;
+            header h1 {
+                font-size: 24px;
+            }
+            header p {
                 font-size: 16px;
             }
-
-            p {
-                font-size: 14px;
+            .cta-button {
+                font-size: 16px;
+                padding: 10px 20px;
             }
         }
 
         @media (max-width: 480px) {
-            .contact-btn {
-                padding: 10px;
+            header h1 {
+                font-size: 20px;
+            }
+            header p {
                 font-size: 14px;
             }
-
-            p {
-                font-size: 12px;
+            .cta-button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+            .service-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            .service-item img {
+                margin-bottom: 10px;
+                margin-right: 0;
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- First Image with Shopee Logo centered on the bottom edge -->
-        <div class="relative-container">
-            <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg" alt="Shopee Team">
-            <img src="https://freelogopng.com/images/all_img/1656180674shopee-logo-transparent.png" alt="Shopee Logo" class="shopee-logo">
+<header>
+    <h1>谷歌、脸书、抖音、油管、TIKTOK、KWAI等海外平台广告开户、代投、充值</h1>
+    <p>全球广告代投+开户+充值服务，行业不限！拥有日均消耗超 50万+U 的客户群体，我们用户覆盖了 Google 、Facebook 、TikTok 、Kwai 等主流平台。无论行业，专业提供 开户、代充 和 精准代投 服务，助您快速提升业务增长和客户获取！</p>
+    <a href="#contact" class="cta-button">联系我们</a>
+</header>
+
+<section class="services">
+    <h2>我们的服务</h2>
+
+
+    <!-- Facebook Instagram Ads -->
+    <div class="service-item">
+        <img src="https://img.icons8.com/fluency/48/000000/facebook-new.png" alt="Facebook Icon">
+        <div>
+            <h3>Facebook Instagram广告投放</h3>
+            <p>创建高度针对性的广告来增加流量，覆盖特定的人口、兴趣和行为。借助Facebook广泛的用户数据，企业可以确保广告被最相关的受众看到。平台强大的分析和优化工具允许持续改进广告效果，从而提高参与度并吸引更多访问者到网站。</p>
         </div>
-
-        <!-- Shopee Logo and Theme Text in a Separate Section -->
-        <div class="shopee-section">
-            <div class="theme-text">Shopee</div>
-            <div class="subtext">Clique no botão abaixo para entrar em contato conosco</div>
-        </div>
-
-        <!-- Second Image -->
-        <img src="https://images.pexels.com/photos/3182832/pexels-photo-3182832.jpeg" alt="Shopee Team 2">
-
-        <!-- Contact Button (below second image, full-width) -->
-        <a href="https://wa.me/5551999999999" class="contact-btn">
-            <div class="logo-container">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
-            </div>
-            <span>Contate-nos</span>
-        </a>
-
-        <!-- Job Description (below contact button) -->
-        <div class="description">
-            <h2>TEMPO PARCIAL EM TEMPO INTEGRAL</h2>
-            <p>Estamos a recrutar colaboradores a tempo parcial ou a tempo inteiro. Trabalhar a partir de casa, sem experiência profissional, apenas necessita de trabalhar 3 a 5 horas por dia e ganhar um bom salário. Não perca esta oportunidade de emprego estável e regular.</p>
-        </div>
-
-        <!-- Third Image -->
-        <img src="https://images.pexels.com/photos/3182802/pexels-photo-3182802.jpeg" alt="Comprovante de Transação">
-        
-        <!-- Additional Image at the Bottom -->
-        <img src="https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg" alt="Additional Image">
     </div>
+
+        <!-- Google Ads -->
+    <div class="service-item">
+        <img src="https://img.icons8.com/color/48/000000/google-logo.png" alt="Google Icon">
+        <div>
+            <h3>Google广告投放</h3>
+            <p>谷歌广告通过在搜索结果和合作网站上展示目标广告来增加流量，吸引主动搜索相关产品或服务的潜在客户。凭借先进的目标定位选项和详细的性能分析，企业可以优化广告活动以吸引更多访问者并提高点击率。</p>
+        </div>
+    </div>
+
+    <!-- TikTok Ads -->
+    <div class="service-item">
+        <img src="https://img.icons8.com/color/48/000000/tiktok--v1.png" alt="TikTok Icon">
+        <div>
+            <h3>TIKTOK短视频广告</h3>
+            <p>TikTok广告通过允许企业创建引人注目的短视频来增加流量，吸引用户的注意力。借助先进的定位和病毒友好型算法，企业可以接触到相关受众并将更多访问者吸引到他们的网站，同时详细的分析帮助优化广告效果。</p>
+        </div>
+    </div>
+
+    <!-- Kwai Ads -->
+    <div class="service-item">
+        <img src="https://logospng.org/download/kwai/logo-kwai-icon-1024.png" alt="Kwai Icon">
+        <div>
+            <h3>KWAI广告投放</h3>
+            <p>快手广告通过短视频广告，与快手庞大的用户群产生共鸣，从而增加流量。借助其推广病毒内容的算法，广告有可能迅速触达广泛的受众。此外，快手提供基于用户兴趣、人口统计和行为的定位选项，确保广告被最相关的受众看到。这种组合推动了更高的参与度和更多的流量流向企业的网站或资料，最终增加了品牌曝光和转化率。</p>
+        </div>
+    </div>
+
+    <!-- X (Twitter) Ads -->
+    <div class="service-item">
+        <img src="https://img.icons8.com/fluency/48/000000/twitter.png" alt="X (Twitter) Icon">
+        <div>
+            <h3>X (推特)广告投放</h3>
+            <p>Twitter广告通过让企业将推文推广给特定受众，提高参与度和点击率，从而增加流量。借助基于兴趣、人口统计和行为的可定制化定位选项，企业可以触达他们理想的受众群体。此外，Twitter的实时性确保广告在用户最活跃时被看到，最大限度地提高可见度，从而吸引更多流量访问他们的网站或个人资料。</p>
+        </div>
+    </div>
+
+    <!-- Bing Ads -->
+    <div class="service-item">
+        <img src="https://img.icons8.com/color/48/000000/bing.png" alt="Bing Icon">
+        <div>
+            <h3>BING广告投放</h3>
+            <p>Bing广告通过搜索结果和合作网站上展示针对性广告来增加流量，扩展其覆盖面到多样化的受众群体。借助基于人口统计、位置和设备的可定制化定位选项，企业可以与正在搜索其产品或服务的用户建立联系。此外，与其他搜索引擎相比，Bing的竞争较低可能导致更具成本效益的广告，从而提高点击率，最终获得更多网站流量。</p>
+        </div>
+    </div>
+
+    <!-- LinkedIn Ads -->
+    <div class="service-item">
+        <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn Icon">
+        <div>
+            <h3>LinkedIn领英广告投放</h3>
+            <p>LinkedIn广告通过根据职位、行业和兴趣等因素定位专业人士，达到高度相关的受众群体，从而增加流量。借助赞助内容、赞助InMail和文字广告等可定制的广告格式，企业可以在LinkedIn平台上吸引用户。此外，LinkedIn的详细定位选项确保广告被正确的人看到，带来更高质量的流量到他们的网站或公司页面，最终导致转化率和业务增长的提高。</p>
+        </div>
+    </div>
+</section>
+
+<!-- About and Contact Section (unchanged) -->
+<section class="about">
+    <h2>dVenturaGlobal海拓服务</h2>
+    <p>全球广告代投+开户+充值服务，行业不限！拥有日均消耗超 50万+U 的客户群体，我们用户覆盖了 Google 、Facebook 、TikTok 、Kwai 等主流平台。无论行业，专业提供 开户、代充 和 精准代投 服务，助您快速提升业务增长和客户获取！</p>
+</section>
+
+<section class="contact">
+    <h3>联系方式</h3>
+    <p>地址: 29 International Business Park, 新加坡 609923</p>
+    <p>邮箱: AdVenturaGlobal@Gmail.com</p>
+</section>
+
+<footer>
+    <p>Copyright &copy; 2024 AdVentura Global. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
